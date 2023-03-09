@@ -41,7 +41,7 @@
                             <input type="hidden" name="category" value="{{ request('category') }}">
                         @endif
                         <input type="text" name="search" placeholder="Find something"
-                            class="bg-transparent placeholder-black font-semibold text-sm"
+                            class="bg-transparent placeholder-black font-semibold text-sm focus:outline-none"
                             value="{{ request('search') }}"
                         >
                     </form>
