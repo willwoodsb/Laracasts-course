@@ -7,11 +7,14 @@ use Illuminate\Validation\Rule;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\Users;
+use Illuminate\Support\Facades\Gate;
 
 class PostController extends Controller
 {
     
+    
     public function index() {
+        
         return view('posts.index', [
             'posts' => Post::latest()->filter(
                 request(['search', 'category', 'author']))
@@ -28,7 +31,7 @@ class PostController extends Controller
 
     public function create()
     {
-        return view('posts.create');
+        return view('admin.posts.create');
     }
 
     public function store()
